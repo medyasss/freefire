@@ -1,0 +1,758 @@
+ 
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="$TRUM IDO Launched! Refer Friends, Earn 5% ETH + 100% Airdrop Unlock!">
+        <meta name="author" content="AFFITRUM">
+        <title>AFFITRUM - Empowering Transparent Digital Advertising with AI and Web3</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- vendors css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!-- main css for template -->
+    <link rel="stylesheet" href="assets/css/style.css">
+	
+	<!-- custom css source -->
+    <script src="npm/sweetalert2@10.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-wordpress-admin@5/wordpress-admin.css">
+	<style>.blink {
+    animation-duration: 1200ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation:blink 1200ms infinite; /* Safari and Chrome */
+}
+@keyframes blink {
+    from {
+        color:#FFF;
+    }
+    to {
+        color:#28DBD1;;
+    }
+}
+@-webkit-keyframes blink {
+    from {
+        color:#FFF;
+    }
+    to {
+        color:#28DBD1;;
+    }
+}</style>
+<!-- Twitter conversion tracking base code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+twq('config','ofi81');
+</script>
+<!-- End Twitter conversion tracking base code -->
+</head>
+
+<body>
+    <!-- preloader start here -->
+    <div class="preloader">
+        <div class="preloader__inner">
+            <div class="preloader__icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- preloader ending here -->
+
+
+
+    <!-- ==========Header Section Starts Here========== -->
+    <header class="header-section">
+        <div class="container">
+            <div class="header-holder">
+                <div class="header-primary d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="brand-logo d-none d-lg-inline-block">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo/logo.png" alt="logo" height="55" width="150">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-wrapper justify-content-lg-end">
+                        <div class="mobile-logo d-lg-none">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo" height="55" width="150"></a>
+                        </div>
+                        <div class="menu-area">
+                            <ul class="menu">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+								<li>
+                                    <a href="app.html">Presale</a>
+                                </li>
+								<li>
+                                    <a href="javascript:void(0);" onclick="referral()">Referral</a>
+                                </li>
+								<li>
+                                    <a href="luckydrop.html">Affi-Luckydrop</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Staking</a>
+									<ul class="submenu">
+									    <li><a href="staking.html">AFFIstaking <span class="badge bg--primary-color">180% <small>apy</small></span></a></li>
+                                        <li><a href="bridgefarm.html">BridgeFarm <span class="badge bg--secondary-color">401% <small>apy</small></span></a></li>
+                                    </ul>
+                                </li>
+								<li>
+                                    <a target="_blank" href="https://bridge.arbitrum.io/">Bridge ETH</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">contract</a>
+									<ul class="submenu">
+                                        <li><a target="_blank" href="https://arbiscan.io/address/0xdd839b26B9d5c10b8744832192EF9971300Ee4BA">AFFI Contract</a></li>
+                                        <li><a target="_blank" href="https://arbiscan.io/address/0x37A41688AeD27D303dfeE5CC89D4D25570756945">TRUM Contract</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+														<a id="walletbutton" class="wallet-btn" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#connectmodal">
+                               Connect Wallet&nbsp;<i class="fa-solid fa-wallet"></i></a>
+														   <!--<a class="wallet-btn" href="#" data-bs-toggle="modal" data-bs-target="#wallet-modal" id="walletbtn">
+                               0x4...5c8c&nbsp;<i class="fa-solid fa-wallet"></i></a>-->
+
+                            <!-- toggle icons -->
+                            <div class="header-bar d-lg-none">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- ==========Header Section Ends Here========== -->
+
+
+
+
+    <!-- connected wallet modal start -->
+    <div class="wallet-modal modal fade" id="wallet-modal" tabindex="-1" aria-labelledby="choose-wallet"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="choose-wallet">Connected Wallet Balance</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h1 id="balancee">0.000 ETH</h1>
+    <p>Invite your friends with Your Affliate Link, <a href="javascript:void(0);" onclick="referral()">[click to view]</a>, Earn 5% from every presale purchase and 100% airdrop unlock.</p>
+  <div class="form-group">
+                        <button class="default-btn" onclick="disconnectFromWallet()"><span>Disconnect Wallet</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- connected wallet modal end -->     
+	
+	
+	<!-- connect wallet modal start -->
+    <div class="wallet-modal modal fade" id="connectmodal" tabindex="-1" aria-labelledby="choose-wallet" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="choose-wallet">Connect Your Wallet</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <p>Choose your Wallet. If you cant find your Wallet, use the WalletConnect option.</p>
+                <div class="account-form">
+                   <div class="form-group">
+<button class="d-block default-btn" onclick="connectToWalletInjected()"><img src="assets/images/wallet/metamask.svg"><span>Metamask</span></button><br>
+
+<!--<button id="trustbutton" class="d-block default-btn" onclick="connectToWalletInjected()"><img src="assets/images/wallet/trustwallet.svg"><span>Trust Wallet</span></button><br>-->
+
+<button class="d-block default-btn" onclick="connectToWalletWC()"><img src="assets/images/wallet/walletconnect.svg"><span>WalletConnect</span></button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- connect wallet modal end --> 
+	
+	
+	<!-- referral modal start -->
+	<div class="wallet-modal modal fade" id="referral-modal" tabindex="-1" aria-labelledby="choose-wallet" aria-modal="true" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="choose-wallet">Invite your Friends</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form class="account-form">
+                    <div class="form-group">
+                        <input id="refaddress" type="text" placeholder="Your Affiliate Link" value="">
+                    </div>
+                    <div class="form-group">
+                        <a class="default-btn" id="showcopy" onclick="kopiraj()"><span>Copy to Clipboard</span></a>
+                    </div>
+                </form>
+    <p>1. You will always receive 5% of your friends purchased ETH from presale.</p>
+	
+	<p>2. You will always receive 5% of your friends $AFFI Airdrop Claim.</p>
+	
+	<p>3. You will be awarded 100% airdrop unlock once one of your invited friend purchases the presale!</p>
+    
+    <p>4. You will also receive 1% of your friends buy and sell camelot volume forever. Invite more to earn more!</p>
+	            </div>
+            </div>
+        </div>
+    </div>
+	<!-- referral modal end --><!-- rules modal -->
+   <div class="wallet-modal modal fade" id="airdroprulesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Read and Accept Rules</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  
+    <div class="stacking__approve">
+                                    <div class="stacking__approve-field mb-5">
+										<p class="note-text"><strong style="color:#28dbd1">Note:</strong> This Airdrop is 100% Free. (NO GAS FEE REQUIRED). Just Ensure you perform all tasks to be eligible to receive the token. airdrop value is $10.</p>
+<p class="note-text"><strong style="color:#28dbd1">Note:</strong> The $AFFI tokens will be sent to your wallet within 24 hours after you claim due to task verification.</p>
+<p class="note-text"><strong style="color:#28dbd1">Note:</strong> The $AFFI airdrop tokens are auto-vested in your wallet. only 25% can be allowed to sell each month.</p>
+<p class="note-text"><strong style="color:#28dbd1">Note:</strong> The dashboards 'Tradeable Balance' row shows the live airdrop unlocked $AFFI amount, which starts each second after you receive your $AFFI. Unlocked $AFFI earnings can be sold instantly.</p>
+<p class="note-text"><strong style="color:#28dbd1">Note:</strong> There is a 5% $AFFI airdrop referral reward for inviting friends. You also get 100% airdrop unlock if a referral buys the presale. You'll also get 1% of your referrals Camelot buy-and-sell trades forever. Invite more friends to earn more.</p>
+<p class="note-text"><strong style="color:#28dbd1">Note:</strong> $AFFI tokens received from airdrop referral are locked until end of our presale. An unlock plan will be announced after the presale.</p>
+<p class="note-text"><strong style="color:#28dbd1">Note:</strong> The quantity of Airdrop Tokens in $AFFI may fluctuate. The sum is not fixed but will still total ~$10.</p>
+<p class="note-text"><strong style="color:#28dbd1">For sustainability, the AFFITRUM team can change the unlock speed or the airdrop claim amount at any time. If you agree with these rules, please click the "Accept and proceed" button.</strong>.</p>
+                                    </div>
+<a href="tasks.html"><button id="actionbutton" class="default-btn"><span>Accept and Proceed</span></button></a>
+                                    
+                                </div>
+	               </div>
+            </div>
+        </div>
+    </div>
+<!-- end rules modal -->
+
+<!-- review modal -->
+   <div class="wallet-modal modal fade" id="inreviewModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Airdrop Tasks Under Review</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  
+    <div class="stacking__approve">
+                                    <div class="stacking__approve-field mb-5">
+										<div class="alert alert-warning">Your submitted tasks are under review by our team. the tokens will be distributed to your wallet after 24 hours if the review was passed</div>
+										<p class="note-text"><strong style="color:#28dbd1">Note:</strong> using new wallets will be disqualified</p>
+<p class="note-text"><strong style="color:#28dbd1">Note:</strong> bots will be disqualified</p>
+<p class="note-text"><strong style="color:#28dbd1">Note:</strong> claiming more than once will be disqualified</p>
+                                    </div>
+<button type="button" class="default-btn" data-bs-dismiss="modal" aria-label="Close"><span>I Understand</span></button>
+                                    
+                                </div>
+	               </div>
+            </div>
+        </div>
+    </div>
+<!-- end review modal -->
+
+    <!-- ================> Page header start here <================== -->
+    <section class="page-header bg--cover" style="background-image: url(assets/images/header/bg.png);">
+        <div class="container">
+            <div class="page-header__content text-center">
+                <h2 class="text-capitalize">Join Our $TRUM Presale</h2>
+                <nav style="--bs-breadcrumb-divider: '-';" aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="https://affitrum.ai/index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Presale</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- ================> Page header end here <================== -->
+
+
+
+
+
+    <!-- ================> Project Details start here <================== -->
+    <section class="pro-details">
+        <div class="container">
+            <div class="pro-details__wrapper">
+                <!-- project item -->
+                <div class="pro-details__block mb-4">
+                    <div class="pro-details__block-inner">
+                        <div class="row g-5 align-items-center">
+                            <div class="col-lg-7">
+                                <div class="pro-details__item-wrap">
+                                    <div class="pro-details__item">
+                                        
+                                        <div class="pro-details__item-content">
+                                            
+                                            <div class="stacking__approve">
+                                <div class="project__item-top" style="margin-top:5px;">
+								                                        <div class="project__item-author">
+                                            <a href="javascript:void(0);"><img src="assets/images/igo/author/1.png" alt="author image"></a>
+                                            <h4>$TRUM Presale <font color="#28DBD1">ROUND1</font></h4>
+                                        </div>
+                                    </div>
+                                    <div class="stacking__approve-field">
+                                        <label for="approve-stack" class="form-label"><span>Enter ETH purchase Amount</span>
+                                        </label>
+                                        <div class="input-group">
+                                          <input type="text" class="form-control" aria-label="Approve Stack" onkeyup="convert('bnb')" id="buyinput" placeholder="0.00" value="0.01">
+											<input id="airdropenddate" type="text" class="form-control" required="required" value="August 12, 2023 23:59:59" style="display: none;"></input>
+											<input id="curridoenddate" type="text" class="form-control" required="required" value="July 29, 2023 23:59:59" style="display: none;"></input>
+											<input id="idostartdate" type="text" class="form-control" required="required" value="July 15, 2023 16:59:59" style="display: none;"></input>
+										    <input id="referer" type="text" class="form-control" required="required" value="" style="display: none;"></input>
+										    <input id="coinsymbol" type="text" class="form-control" required="required" value="AFFI" style="display: none;"></input>
+											<input id="totallocairdrop" type="text" class="form-control" required="required" value="40000000" style="display: none;"></input>
+                                            <input id="leftover" type="text" class="form-control" required="required" value="0" style="display: none;"></input>
+                                            <input id="tokenidoprice" type="text" class="form-control" required="required" value="0.000066" style="display: none;"></input>
+											<input id="refaltinput" type="text" class="form-control" required="required" value="0x3e223bEE48Fea4eae861817207f860f5d8F0eCFe" style="display: none;"></input>
+                                            <span class="input-group-text"><a href="javascript:void(0);" onclick="MaxiumWallet()">Max</a></span>
+                                        </div>
+										<small>You will receive <b id="converted">0</b> TRUM</small>
+                                    </div>
+                                    <div class="btn-group mt-4 d-flex flex-wrap gap-20">
+									<a id="presalebtn" href="javascript:void(0);" class="default-btn default-btn--small" data-bs-toggle="modal" data-bs-target="#connectmodal"><span>Connect Wallet&nbsp;<i class="fa-solid fa-wallet"></i></span></a>
+									<text id="friendsbtn"></text>
+                                    </div>
+                                </div>
+                                        </div>
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="pro-details__info">
+                                    <div class="row g-3">
+                                        <div class="col-sm-6">
+                                            <div class="pro-details__info-item">
+                                                <h6 class="pro-details__info-name">
+                                                    Your Purchased TRUM
+
+                                                </h6>
+                                                <p class="pro-details__info-value" id="idopurchased">
+                                                    0.000000 TRUM
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pro-details__info-item">
+                                                <h6 class="pro-details__info-name">
+                                                    Current Sale Progress
+                                                </h6>
+                                                <p class="pro-details__info-value">
+                                                   86% completed
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pro-details__info-item">
+                                                <h6 class="pro-details__info-name">
+                                                    Current Round Price
+                                                </h6>
+                                                <p class="pro-details__info-value">
+                                                    1ETH : 15,151 TRUM
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="pro-details__info-item">
+                                                <h6 class="pro-details__info-name">
+                                                    Current Round Ends
+
+                                                </h6>
+                                                <p id="idoends" class="pro-details__info-value">
+                                                    0d 0h 0m 0s
+                                                </p>
+                                            </div>
+                                        </div>
+										<a href="javascript:void(0);" onclick="soon()" class="default-btn default-btn--small default-btn--secondary" style="text-align: center; cursor: not-allowed;"><span>CLAIM PRESALE</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- token infos -->
+                <div class="pro-details__token mb-5">
+                    <div class="row g-4 row-cols-auto ">
+                        <div class="col">
+                            <div
+                                class="pro-details__token-item d-flex flex-wrap justify-content-between align-items-center gap-40">
+                                <div class="pro-details__token-title">
+                                    <span>$</span>
+                                    <h6>AFFI Token Price :</h6>
+                                </div>
+                                <div class="pro-details__token-value">
+                                    <p>0.103 <sub>USD</sub></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="pro-details__token-item">
+                                <p><a href="javascript:void(0);" onclick="referral()"><text class="blink">Invite friends, Earn 5% purchased ETH + 100% Airdrop Unlock.</text></a></p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div
+                                class="pro-details__token-item d-flex flex-wrap justify-content-between align-items-center gap-40">
+                                <div class="pro-details__token-title">
+                                    <span>$</span>
+                                    <h6>TRUM Listing Price :</h6>
+                                </div>
+                                <div class="pro-details__token-value">
+                                    <p>0.000098 <sub>ETH</sub></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- project description -->
+                <div class="pro-details__desc">
+                    <div class="row flex-lg-row-reverse g-5">
+
+                        <div class="col-lg-8">
+                            <div class="pro-details__desc-content">
+                                <div data-bs-spy="scroll" data-bs-target="#pro-details-navlist"
+                                    data-bs-smooth-scroll="true" data-bs-root-margin="0px 0px -60%"
+                                    class="scrollspy-example" tabindex="0">
+
+                                    <!-- about -->
+                                    <section id="pro-details-about">
+<div class="project__wrapper">
+                <div class="row g-12">
+                    <div class="col-lg-12 col-sm-12">
+                        <div class="project__item">
+                            <div class="project__item-inner">
+                                
+                                <div class="project__item-content" >
+                                    <div class="project__item-top" style="margin-top:5px;">
+                                        <div class="project__item-author">
+                                            <a href="app.html#"><img src="assets/images/igo/author/1.png" alt="author image"></a>
+                                            <h4>Join The AFFI Airdrop</h4>
+                                        </div>
+                                    </div>
+                                    <div class="project__item-middle">
+                                        <ul class="project__infolist">
+										    <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Invited From:</p>
+                                                <p class="project__infolist-data">Nobody</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Tradeable Balance:</p>
+                                                <p class="project__infolist-data" id="unlockedtoken">0.000000 AFFI</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Locked Balance:</p>
+                                                <p class="project__infolist-data" id="lockedtoken">0.000000 AFFI</p>
+                                            </li>
+											<li class="project__infolist-item">
+                                                <p class="project__infolist-name">Referral Balance:</p>
+                                                <p class="project__infolist-data" id="reftoken">0.000000 AFFI</p>
+                                            </li>
+											<li class="project__infolist-item">
+                                                <p class="project__infolist-name">Total Invited Friends:</p>
+                                                <p class="project__infolist-data" id="refcount">0 users</p>
+                                            </li>
+                                            <li class="project__infolist-item">
+                                                <p class="project__infolist-name">Airdrop Ends</p>
+                                                <p class="project__infolist-data" id="demo">0d 0h 0m 0s</p>
+                                            </li>
+                                        </ul>
+
+                                        <div class="project__item-amount">
+                                            <p>Your Share: <h6 id="amttoclaim">Connect Wallet</h6></p>
+											Total Claimed: 
+                                            <h6><span class="color--theme-color" id="totalclaimed">0</span> / <span>40,000,000 AFFI</span>
+                                            </h6>
+                                            <div class="progress" id="progressba">
+                                                <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="project__item-bottom" style="padding-top:10px;">
+                                        <a id="claimbtn" href="javascript:void(0);" class="default-btn default-btn--small" data-bs-toggle="modal" data-bs-target="#connectmodal"><span>Connect&nbsp;<i class="fa-solid fa-wallet"></i></span></a>
+										<a target="_blank" href="https://docs.affitrum.ai/affi-dapp/affi-drop" class="default-btn default-btn--small">Rules</a>
+                                    </div>
+									
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+                                    </section>
+
+                                    <!-- token -->
+                                    <section id="pro-details-token">
+                                        <h4>$TRUM Token Economics</h4>
+                                        <p>$TRUM tokens on Arbitrum Chain will drive the TRUM ecosystem and support the $TRUM blockchain development and Ad exchange.</p>
+                                        <div class="pro-details__token-info mt-4">
+                                            <h5>Token Info</h5>
+                                            <ul class="pro-details__tokenlist">
+                                                <li class="pro-details__tokenlist-item"><i
+                                                        class="fa-solid fa-dice-d6"></i>
+                                                    Total Supply: 100M $TRUM</li>
+                                                <li class="pro-details__tokenlist-item"><i
+                                                        class="fa-solid fa-dice-d6"></i>
+                                                    Presale Allocation: 72M $TRUM</li>
+												<li class="pro-details__tokenlist-item"><i
+                                                        class="fa-solid fa-dice-d6"></i>
+                                                    Liquidity & CEX Allocation: 20M $TRUM</li>
+												<li class="pro-details__tokenlist-item"><i
+                                                        class="fa-solid fa-dice-d6"></i>
+                                                    Mining & Rewards Allocation: 8M $TRUM</li>
+                                                <li class="pro-details__tokenlist-item"><i
+                                                        class="fa-solid fa-dice-d6"></i>
+                                                    Token Name: AFFITRUM</li>
+                                                <li class="pro-details__tokenlist-item"><i
+                                                        class="fa-solid fa-dice-d6"></i>
+                                                    Token Abbreviation: TRUM</li>
+                                                <li class="pro-details__tokenlist-item"><i
+                                                        class="fa-solid fa-dice-d6"></i>
+                                                    Token Decimals: 6</li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <aside>
+                                <div class="pro-details__desc-nav">
+
+                                    <!-- navlist -->
+                                    <div class="list-group bg--primary-color mb-4" id="pro-details-navlist">
+                                        <a class="list-group-item list-group-item-action" href="app.html#"><i
+                                                class="fa-solid fa-window-restore"></i>Airdrop</a>
+                                        <a class="list-group-item list-group-item-action" href="bridgefarm.html"> <i
+                                                class="fa-solid fa-diagram-project"></i>TRUM BridgeFarm&nbsp;&nbsp;<span class="badge bg--secondary-color">401%<small>apy</small></span></a>
+                                        <a class="list-group-item list-group-item-action" href="staking.html">
+                                            <i class="fa-solid fa-road"></i>AFFI STAKING</a>
+                                        <a class="list-group-item list-group-item-action" href="luckydrop.html"><i
+                                                class="fa-solid fa-user-astronaut"></i>LUCKYDROP</a>
+                                    </div>
+
+
+                                    <!-- pro details link -->
+                                    <div class="pro-details__links">
+                                        <div class="pro-details__links-item">
+                                            <div class="pro-details__links-title">
+                                                <h6>Social Media</h6>
+                                            </div>
+                                            <div class="pro-details__links-content">
+                                                <ul class="social">
+												    <li class="social__item">
+                                                        <a href="https://discord.gg/5tn8ZeuB" class="social__link"><i
+                                                                class="fab fa-discord"></i></a>
+                                                    </li>
+												    <li class="social__item">
+                                                        <a href="https://t.me/affitrum" class="social__link"><i
+                                                                class="fab fa-telegram"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://t.me/affitrumprotocol" class="social__link"><i
+                                                                class="fab fa-telegram"></i></a>
+                                                    </li>
+                                                    <li class="social__item">
+                                                        <a href="https://twitter.com/affitrum" class="social__link"><i
+                                                                class="fab fa-twitter"></i></a>
+                                                    </li>
+                                                    <li class="social__item">
+                                                        <a href="https://medium.com/@affitrum" class="social__link"><i
+                                                                class="fab fa-medium"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://facebook.com/affitrum" class="social__link"><i
+                                                                class="fab fa-facebook"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://www.youtube.com/channel/UClPL3Ff4xfY2z18rBC1Xjtg" class="social__link"><i
+                                                                class="fab fa-youtube"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://github.com/affitrum/AFFITRUM" class="social__link"><i
+                                                                class="fab fa-github"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="pro-details__links-item">
+                                            <div class="pro-details__links-title">
+                                                <h6>$TRUM CONTRACT</h6>
+                                            </div>
+                                            <div class="pro-details__links-content">
+                                                <a class="pro-details__links-btn" href="javascript:void(0)" onclick="copytrumcontract()">
+												0x37A..6945
+												<span><i class="fa-solid fa-clipboard"></i></span>
+                                                </a>
+                                            </div>
+											<input type="text" value="0x37A41688AeD27D303dfeE5CC89D4D25570756945" id="trumcontract" style="display: none;">
+                                        </div>
+										<div class="pro-details__links-item">
+                                            <div class="pro-details__links-title">
+                                                <h6>$AFFI CONTRACT</h6>
+                                            </div>
+                                            <div class="pro-details__links-content">
+                                                <a class="pro-details__links-btn" href="javascript:void(0)" onclick="copyafficontract()">
+												0xdd8..e4BA
+												<span><i class="fa-solid fa-clipboard"></i></span>
+                                                </a>
+                                            </div>
+											<input type="text" value="0xdd839b26B9d5c10b8744832192EF9971300Ee4BA" id="afficontract" style="display: none;">
+                                        </div>
+                                        <div class="pro-details__links-item">
+                                            <div class="pro-details__links-title">
+                                                <h6>Our Audits & KYC</h6>
+                                            </div>
+                                            <div class="pro-details__links-content">
+                                                <a target="_blank" class="pro-details__links-btn" href="https://app.solidproof.io/projects/affitrum">SOLID PROOF<span><i
+                                                            class="fa-solid fa-cloud-arrow-down"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+										<div class="pro-details__links-item">
+                                            <div class="pro-details__links-title">
+                                                <h6>Documentation</h6>
+                                            </div>
+                                            <div class="pro-details__links-content">
+                                                <a target="_blank" class="pro-details__links-btn" href="https://docs.affitrum.ai/">Gitbook <span><i
+                                                            class="fa-solid fa-address-book"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+										<div class="pro-details__links-item">
+                                            <div class="pro-details__links-title">
+                                                <h6>Locked Liquidity</h6>
+                                            </div>
+                                            <div class="pro-details__links-content">
+                                                <a target="_blank" class="pro-details__links-btn" href="https://app.uncx.network/amm/camelot/pair/0x961436825ea4DA9C4A1DA001Db2Ac34D4A82739c">Unicrypt <span><i
+                                                            class="fa-solid  fa-lock"></i></span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- ================> Project Details end here <================== -->
+	    <!-- ================> Footer section start here <================== -->
+    <footer class="footer" style="background-image: url(assets/images/footer/bg.png);">
+        <div class="footer__wrapper">
+            <div class="container">
+                <div class="footer__content text-center">
+                    <a class="mb-4 d-inline-block" href="https://affitrum.ai/index.html"><img src="assets/images/logo/logo.png"
+                            alt="Logo" height="110" width="300"></a>
+                    <ul class="social justify-content-center">
+					<li class="social__item">
+                                                        <a href="https://discord.gg/5tn8ZeuB" class="social__link"><i
+                                                                class="fab fa-discord"></i></a>
+                                                    </li>
+                        <li class="social__item">
+						                            
+                                                    <a href="https://t.me/affitrum" class="social__link"><i
+                                                                class="fab fa-telegram"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://t.me/affitrumprotocol" class="social__link"><i
+                                                                class="fab fa-telegram"></i></a>
+                                                    </li>
+                                                    <li class="social__item">
+                                                        <a href="https://twitter.com/affitrum" class="social__link"><i
+                                                                class="fab fa-twitter"></i></a>
+                                                    </li>
+                                                    <li class="social__item">
+                                                        <a href="https://medium.com/@affitrum" class="social__link"><i
+                                                                class="fab fa-medium"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://facebook.com/affitrum" class="social__link"><i
+                                                                class="fab fa-facebook"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://www.youtube.com/channel/UClPL3Ff4xfY2z18rBC1Xjtg" class="social__link"><i
+                                                                class="fab fa-youtube"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://github.com/affitrum/AFFITRUM" class="social__link"><i
+                                                                class="fab fa-github"></i></a>
+                                                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="container">
+                <div class="text-center py-4">
+                    <p class=" mb-0">Affitrum© 2023 | All Rights Reserved </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ================> Footer section end here <================== -->
+
+
+    <!-- scrollToTop start here -->
+    <a href="app.html#" class="scrollToTop"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+    <!-- scrollToTop ending here  -->
+	
+	<script src="https://affitrum.ai/js/copyscript5.js"></script>
+
+    <!-- vendor plugins -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+	
+	<script type="text/javascript" src="unpkg.com/web3@1.6.1/dist/walletconnect_v2.8.3.js"></script>
+	<script type="text/javascript" src="unpkg.com/web3@1.6.1/dist/web3-providers-http.min.js"></script>
+	<script type="text/javascript" src="unpkg.com/web3@1.6.1/dist/web3.min.js"></script>
+    <script type="text/javascript" src="js/app9.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/purecounter.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => ms_init(), 5000);
+      });
+</body>
+
+</html>

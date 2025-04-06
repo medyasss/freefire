@@ -1,0 +1,459 @@
+ <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Perform Tasks and Refer Friends to Earn Rewards">
+        <meta name="author" content="AFFITRUM">
+        <title>AFFITRUM - AIRDROP</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- vendors css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!-- main css for template -->
+    <link rel="stylesheet" href="assets/css/style.css">
+	
+	<!-- custom css source -->
+    <script src="npm/sweetalert2@10.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-wordpress-admin@5/wordpress-admin.css">
+	<style>.blink {
+    animation-duration: 1200ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation:blink 1200ms infinite; /* Safari and Chrome */
+}
+@keyframes blink {
+    from {
+        color:#FFF;
+    }
+    to {
+        color:#28DBD1;;
+    }
+}
+@-webkit-keyframes blink {
+    from {
+        color:#FFF;
+    }
+    to {
+        color:#28DBD1;;
+    }
+}</style>
+<!-- Twitter conversion tracking base code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+twq('config','ofi81');
+</script>
+<!-- End Twitter conversion tracking base code -->
+</head>
+
+<body>
+    <!-- preloader start here -->
+    <div class="preloader">
+        <div class="preloader__inner">
+            <div class="preloader__icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- preloader ending here -->
+
+
+
+    <!-- ==========Header Section Starts Here========== -->
+    <header class="header-section">
+        <div class="container">
+            <div class="header-holder">
+                <div class="header-primary d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="brand-logo d-none d-lg-inline-block">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo/logo.png" alt="logo" height="55" width="150">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-wrapper justify-content-lg-end">
+                        <div class="mobile-logo d-lg-none">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo" height="55" width="150"></a>
+                        </div>
+                        <div class="menu-area">
+                            <ul class="menu">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+								<li>
+                                    <a href="app.html">Presale</a>
+                                </li>
+								<li>
+                                    <a href="javascript:void(0);" onclick="referral()">Referral</a>
+                                </li>
+								<li>
+                                    <a href="luckydrop.html">Affi-Luckydrop</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Staking</a>
+									<ul class="submenu">
+									    <li><a href="staking.html">AFFIstaking <span class="badge bg--primary-color">180% <small>apy</small></span></a></li>
+                                        <li><a href="bridgefarm.html">BridgeFarm <span class="badge bg--secondary-color">401% <small>apy</small></span></a></li>
+                                    </ul>
+                                </li>
+								<li>
+                                    <a target="_blank" href="https://bridge.arbitrum.io/">Bridge ETH</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">contract</a>
+									<ul class="submenu">
+                                        <li><a target="_blank" href="https://arbiscan.io/address/0xdd839b26B9d5c10b8744832192EF9971300Ee4BA">AFFI Contract</a></li>
+                                        <li><a target="_blank" href="https://arbiscan.io/address/0x37A41688AeD27D303dfeE5CC89D4D25570756945">TRUM Contract</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+														<a id="walletbutton" class="wallet-btn" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#connectmodal">
+                               Connect Wallet&nbsp;<i class="fa-solid fa-wallet"></i></a>
+														   <!--<a class="wallet-btn" href="#" data-bs-toggle="modal" data-bs-target="#wallet-modal" id="walletbtn">
+                               0x4...5c8c&nbsp;<i class="fa-solid fa-wallet"></i></a>-->
+
+                            <!-- toggle icons -->
+                            <div class="header-bar d-lg-none">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- ==========Header Section Ends Here========== -->
+
+
+
+
+    <!-- connected wallet modal start -->
+    <div class="wallet-modal modal fade" id="wallet-modal" tabindex="-1" aria-labelledby="choose-wallet"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="choose-wallet">Connected Wallet Balance</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h1 id="balancee">0.000 ETH</h1>
+    <p>Invite your friends with Your Affliate Link, <a href="javascript:void(0);" onclick="referral()">[click to view]</a>, Earn 5% from every presale purchase and 100% airdrop unlock.</p>
+  <div class="form-group">
+                        <button class="default-btn" onclick="disconnectFromWallet()"><span>Disconnect Wallet</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- connected wallet modal end -->     
+	
+	
+	<!-- connect wallet modal start -->
+    <div class="wallet-modal modal fade" id="connectmodal" tabindex="-1" aria-labelledby="choose-wallet" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="choose-wallet">Connect Your Wallet</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <p>Choose your Wallet. If you cant find your Wallet, use the WalletConnect option.</p>
+                <div class="account-form">
+                   <div class="form-group">
+<button class="d-block default-btn" onclick="connectToWalletInjected()"><img src="assets/images/wallet/metamask.svg"><span>Metamask</span></button><br>
+
+<!--<button id="trustbutton" class="d-block default-btn" onclick="connectToWalletInjected()"><img src="assets/images/wallet/trustwallet.svg"><span>Trust Wallet</span></button><br>-->
+
+<button class="d-block default-btn" onclick="connectToWalletWC()"><img src="assets/images/wallet/walletconnect.svg"><span>WalletConnect</span></button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- connect wallet modal end --> 
+	
+	
+	<!-- referral modal start -->
+	<div class="wallet-modal modal fade" id="referral-modal" tabindex="-1" aria-labelledby="choose-wallet" aria-modal="true" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="choose-wallet">Invite your Friends</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form class="account-form">
+                    <div class="form-group">
+                        <input id="refaddress" type="text" placeholder="Your Affiliate Link" value="">
+                    </div>
+                    <div class="form-group">
+                        <a class="default-btn" id="showcopy" onclick="kopiraj()"><span>Copy to Clipboard</span></a>
+                    </div>
+                </form>
+    <p>1. You will always receive 5% of your friends purchased ETH from presale.</p>
+	
+	<p>2. You will always receive 5% of your friends $AFFI Airdrop Claim.</p>
+	
+	<p>3. You will be awarded 100% airdrop unlock once one of your invited friend purchases the presale!</p>
+    
+    <p>4. You will also receive 1% of your friends buy and sell camelot volume forever. Invite more to earn more!</p>
+	            </div>
+            </div>
+        </div>
+    </div>
+	<!-- referral modal end -->
+    <!-- ================> Page header start here <================== -->
+    <section class="page-header bg--cover" style="background-image: url(assets/images/header/bg.png);">
+        <div class="container">
+            <div class="page-header__content text-center">
+                <h2 class="text-capitalize">Perform Tasks, Submit Data</h2>
+                <nav style="--bs-breadcrumb-divider: '-';" aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="https://affitrum.ai/index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Taskspage</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- ================> Page header end here <================== -->
+
+
+
+
+
+    <!-- ================> Apply project start here <================== -->
+    <section class="apply-project">
+        <div class="container">
+            <div class="section-header section-header--middle">
+                <div class="section-header__content">
+                    <div class="section-header__titlebar">
+                        <h2 class="section__header__title">Tasks List</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="apply-project__wrapper">
+                <form action="javascript:void(0);" method="post" class="apply-project__form">
+				<input id="referer" name="referer" type="text" class="form-control" required="required" value="0x56762d0AF289DcBd1c7C562bA228d4dEef511AfC" style="display: none;"></input>
+				<input id="wallett" name="wallett"  type="text" class="form-control" required="required" value="" style="display: none;"></input>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 col-md-8">
+
+                            <!-- ========= Contact Info============= -->
+                     <div class="apply-project__block mb-4">
+                                <div class="apply-project__block-header">
+                                    <h4>Twitter Tasks</h4>
+                                </div>
+                                <div class="apply-project__block-content">
+
+<div style="padding-bottom:20px;"> 1. Follow our twitter page, Like pinned tweet.
+<div class="btn-group d-flex flex-wrap gap-20">
+<a href="https://twitter.com/affitrum" target="_blank" class="default-btn default-btn--small"><span><i class="fab fa-twitter"></i>&nbsp;Go to Page</span></a>
+<a href="javascript:void(0);" class="default-btn default-btn--small default-btn--secondary" onclick="CopyToClipboard('https://twitter.com/affitrum')"><span><i class="fa fa-clipboard"></i>&nbsp;Copy Link</span></a>
+</div>
+</div>
+
+<div style="padding-bottom:20px;"> 2. Quote and retweet our airdrop tweet, Ensure to mention three @friends before retweet.
+<div class="btn-group d-flex flex-wrap gap-20">
+<a href="https://twitter.com/compose/tweet?text=AFFITRUM%20Airdrop%20Launched.%20Claim%20Your%20%2415%20%24AFFI%20Airdrop%20Now%0A%0A%23AFFITRUM%20%23TRUMPRESALE%20%23AFFITOKEN%20%0A%23ARBITRUMAIRDROP%20%23ARB%0A%0Ahttps%3A%2F%2Ftwitter.com%2Faffitrum%2Fstatus%2F1677869734279147520" target="_blank" class="default-btn default-btn--small"><span><i class="fab fa-twitter"></i>&nbsp;Go to tweet</span></a>
+<a href="javascript:void(0);" class="default-btn default-btn--small default-btn--secondary" onclick="CopyToClipboard('https://twitter.com/compose/tweet?text=AFFITRUM%20Airdrop%20Launched.%20Claim%20Your%20%2415%20%24AFFI%20Airdrop%20Now%0A%0A%23AFFITRUM%20%23TRUMPRESALE%20%23AFFITOKEN%20%0A%23ARBITRUMAIRDROP%20%23ARB%0A%0Ahttps%3A%2F%2Ftwitter.com%2Faffitrum%2Fstatus%2F1679051249994350592')"><span><i class="fa fa-clipboard"></i>&nbsp;Copy Link</span></a>
+</div>
+</div>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="applyinfo-twitter"
+                                            placeholder="Twitter username" required>
+                                        <label for="applyinfo-twitter">Enter your Twitter username</label>
+                                    </div>
+									<div style="padding-bottom:10px;"></div>
+									<div class="form-floating">
+                                        <input type="url" class="form-control" id="applyinfo-twitterretweet"
+                                            placeholder="Retweet URL" required>
+                                        <label for="project-whitepaper">Enter your Twitter retweet Link</label>
+                                    </div>
+                                </div>
+                            </div>
+							
+                            <div class="apply-project__block mb-4">
+                                <div class="apply-project__block-header">
+                                    <h4>Telegram Tasks</h4>
+                                </div>
+                                <div class="apply-project__block-content">
+<div style="padding-bottom:20px;"> 1. Join our Telegram Group and add 3 members.
+<div class="btn-group d-flex flex-wrap gap-20">
+<a href="https://t.me/affitrum" target="_blank" class="default-btn default-btn--small"><span><i class="fab fa-telegram"></i>&nbsp;Join Group</span></a>
+<a href="javascript:void(0);" class="default-btn default-btn--small default-btn--secondary" onclick="CopyToClipboard('https://t.me/affitrum')"><span><i class="fa fa-clipboard"></i>&nbsp;Copy Link</span></a>
+</div>
+</div>
+<div style="padding-bottom:20px;"> 2. Join our Telegram Channel.
+<div class="btn-group d-flex flex-wrap gap-20">
+<a href="https://t.me/affitrumprotocol" target="_blank" class="default-btn default-btn--small"><span><i class="fab fa-telegram"></i>&nbsp;Join Channel</span></a>
+<a href="javascript:void(0);" class="default-btn default-btn--small default-btn--secondary" onclick="CopyToClipboard('https://t.me/affitrumprotocol')"><span><i class="fa fa-clipboard"></i>&nbsp;Copy Link</span></a>
+</div>
+</div>
+<div style="padding-bottom:20px;"> 3. Start our Telegram BOT to Get your unique Telegram ID.
+<div class="btn-group d-flex flex-wrap gap-20">
+<a href="https://t.me/affitrumbot" target="_blank" class="default-btn default-btn--small"><span><i class="fab fa-telegram"></i>&nbsp;Go to Bot</span></a>
+<a href="javascript:void(0);" class="default-btn default-btn--small default-btn--secondary" onclick="CopyToClipboard('https://t.me/affitrumbot')"><span><i class="fa fa-clipboard"></i>&nbsp;Copy Link</span></a>
+</div>
+</div>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="tid" name="tid"
+                                            placeholder="Telegram ID" required>
+                                        <label for="applyinfo-telegram">Enter your Telegram ID Here</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- =========== Project Info ========= -->
+                            <div class="apply-project__block mb-5">
+                                <div class="apply-project__block-header">
+                                    <h4>Other Tasks</h4>
+                                </div>
+                                <div class="apply-project__block-content">
+<div style="padding-bottom:5px;"> 1. Follow our Instagram Page, Like and comment on any post.
+<div class="btn-group d-flex flex-wrap gap-20">
+<a href="https://instagram.com/affitrum" target="_blank" class="default-btn default-btn--small"><span><i class="fab fa-instagram"></i>&nbsp;Go to Instagram</span></a>
+<a href="javascript:void(0);" class="default-btn default-btn--small default-btn--secondary" onclick="CopyToClipboard('https://instagram.com/affitrum')"><span><i class="fa fa-clipboard"></i>&nbsp;Copy Link</span></a>
+</div>
+</div>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" placeholder="instagram username" required>
+                                        <label for="project-medium">Enter your Instagram username</label>
+                                    </div>
+									<div style="padding-bottom:10px;"></div>
+<div style="padding-bottom:5px;"> 2. Subscribe to our Youtube Channel.
+<div class="btn-group d-flex flex-wrap gap-20">
+<a href="https://www.youtube.com/channel/UClPL3Ff4xfY2z18rBC1Xjtg" target="_blank" class="default-btn default-btn--small"><span><i class="fab fa-youtube"></i>&nbsp;Go to Youtube</span></a>
+<a href="javascript:void(0);" class="default-btn default-btn--small default-btn--secondary" onclick="CopyToClipboard('https://www.youtube.com/channel/UClPL3Ff4xfY2z18rBC1Xjtg')"><span><i class="fa fa-clipboard"></i>&nbsp;Copy Link</span></a>
+</div>
+</div>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control"
+                                            placeholder="Youtube Email" required>
+                                        <label for="project-medium">Enter your Youtube Gmail or Channel link</label>
+                                    </div>
+									<div style="padding-bottom:10px;"></div>
+<div style="padding-bottom:5px;"> 3. Follow our Facebook Page, like and comment on any post.
+<div class="btn-group d-flex flex-wrap gap-20">
+<a href="https://facebook.com/affitrum" target="_blank" class="default-btn default-btn--small"><span><i class="fab fa-facebook"></i>&nbsp;Go to Facebook</span></a>
+<a href="javascript:void(0);" class="default-btn default-btn--small default-btn--secondary" onclick="CopyToClipboard('https://facebook.com/affitrum')"><span><i class="fa fa-clipboard"></i>&nbsp;Copy Link</span></a>
+</div>
+</div>
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control"
+                                            placeholder="Facebook Link" required>
+                                        <label for="project-medium">Enter your Facebook Username or Profile Link</label>
+                                    </div>
+                                </div>
+                            </div>
+							
+                            <div class="text-center">
+							   <div class="h-captcha" data-sitekey="9825d9e5-fbad-46e6-b5db-52f728f89034"></div>
+                               <a id="buttons" href="javascript:void(0);" class="default-btn default-btn--small" data-bs-toggle="modal" data-bs-target="#connectmodal"><span>Connect Wallet&nbsp;<i class="fa-solid fa-wallet"></i></span></a> 
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+	
+	
+	<script src="https://hcaptcha.com/1/api.js" async defer></script>
+    <!-- ================> Project Details end here <================== -->
+	    <!-- ================> Footer section start here <================== -->
+    <footer class="footer" style="background-image: url(assets/images/footer/bg.png);">
+        <div class="footer__wrapper">
+            <div class="container">
+                <div class="footer__content text-center">
+                    <a class="mb-4 d-inline-block" href="https://affitrum.ai/index.html"><img src="assets/images/logo/logo.png"
+                            alt="Logo" height="110" width="300"></a>
+                    <ul class="social justify-content-center">
+					<li class="social__item">
+                                                        <a href="https://discord.gg/5tn8ZeuB" class="social__link"><i
+                                                                class="fab fa-discord"></i></a>
+                                                    </li>
+                        <li class="social__item">
+						                            
+                                                    <a href="https://t.me/affitrum" class="social__link"><i
+                                                                class="fab fa-telegram"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://t.me/affitrumprotocol" class="social__link"><i
+                                                                class="fab fa-telegram"></i></a>
+                                                    </li>
+                                                    <li class="social__item">
+                                                        <a href="https://twitter.com/affitrum" class="social__link"><i
+                                                                class="fab fa-twitter"></i></a>
+                                                    </li>
+                                                    <li class="social__item">
+                                                        <a href="https://medium.com/@affitrum" class="social__link"><i
+                                                                class="fab fa-medium"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://facebook.com/affitrum" class="social__link"><i
+                                                                class="fab fa-facebook"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://www.youtube.com/channel/UClPL3Ff4xfY2z18rBC1Xjtg" class="social__link"><i
+                                                                class="fab fa-youtube"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://github.com/affitrum/AFFITRUM" class="social__link"><i
+                                                                class="fab fa-github"></i></a>
+                                                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="container">
+                <div class="text-center py-4">
+                    <p class=" mb-0">Affitrum© 2023 | All Rights Reserved </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ================> Footer section end here <================== -->
+
+
+    <!-- scrollToTop start here -->
+    <a href="tasks.html#" class="scrollToTop"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+    <!-- scrollToTop ending here  -->
+	
+	<script src="https://affitrum.ai/js/copyscript5.js"></script>
+
+    <!-- vendor plugins -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+	
+	<script type="text/javascript" src="unpkg.com/web3@1.6.1/dist/walletconnect_v2.8.3.js"></script>
+	<script type="text/javascript" src="unpkg.com/web3@1.6.1/dist/web3-providers-http.min.js"></script>
+	<script type="text/javascript" src="unpkg.com/web3@1.6.1/dist/web3.min.js"></script>
+    <script type="text/javascript" src="js/tasks.js"></script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/purecounter.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

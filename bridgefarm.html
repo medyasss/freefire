@@ -1,0 +1,482 @@
+ <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Bridge-stake your unclaimed $TRUM from presale, Earn $AFFI up to 1% per day (401% APY). harvestable every 10 minutes.">
+        <meta name="author" content="AFFITRUM">
+        <title>AFFITRUM - TRUM BRIDGE FARMING</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <!-- vendors css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/aos.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!-- main css for template -->
+    <link rel="stylesheet" href="assets/css/style.css">
+	
+	<!-- custom css source -->
+    <script src="npm/sweetalert2@10.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-wordpress-admin@5/wordpress-admin.css">
+	<style>.blink {
+    animation-duration: 1200ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation:blink 1200ms infinite; /* Safari and Chrome */
+}
+@keyframes blink {
+    from {
+        color:#FFF;
+    }
+    to {
+        color:#28DBD1;;
+    }
+}
+@-webkit-keyframes blink {
+    from {
+        color:#FFF;
+    }
+    to {
+        color:#28DBD1;;
+    }
+}</style>
+<!-- Twitter conversion tracking base code -->
+<script>
+!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
+a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+twq('config','ofi81');
+</script>
+<!-- End Twitter conversion tracking base code -->
+</head>
+
+<body>
+    <!-- preloader start here -->
+    <div class="preloader">
+        <div class="preloader__inner">
+            <div class="preloader__icon">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- preloader ending here -->
+
+
+
+    <!-- ==========Header Section Starts Here========== -->
+    <header class="header-section">
+        <div class="container">
+            <div class="header-holder">
+                <div class="header-primary d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="brand-logo d-none d-lg-inline-block">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo/logo.png" alt="logo" height="55" width="150">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="header-wrapper justify-content-lg-end">
+                        <div class="mobile-logo d-lg-none">
+                            <a href="index.html"><img src="assets/images/logo/logo.png" alt="logo" height="55" width="150"></a>
+                        </div>
+                        <div class="menu-area">
+                            <ul class="menu">
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+								<li>
+                                    <a href="app.html">Presale</a>
+                                </li>
+								<li>
+                                    <a href="javascript:void(0);" onclick="referral()">Referral</a>
+                                </li>
+								<li>
+                                    <a href="luckydrop.html">Affi-Luckydrop</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">Staking</a>
+									<ul class="submenu">
+									    <li><a href="staking.html">AFFIstaking <span class="badge bg--primary-color">180% <small>apy</small></span></a></li>
+                                        <li><a href="bridgefarm.html">BridgeFarm <span class="badge bg--secondary-color">401% <small>apy</small></span></a></li>
+                                    </ul>
+                                </li>
+								<li>
+                                    <a target="_blank" href="https://bridge.arbitrum.io/">Bridge ETH</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">contract</a>
+									<ul class="submenu">
+                                        <li><a target="_blank" href="https://arbiscan.io/address/0xdd839b26B9d5c10b8744832192EF9971300Ee4BA">AFFI Contract</a></li>
+                                        <li><a target="_blank" href="https://arbiscan.io/address/0x37A41688AeD27D303dfeE5CC89D4D25570756945">TRUM Contract</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+														<a id="walletbutton" class="wallet-btn" href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#connectmodal">
+                               Connect Wallet&nbsp;<i class="fa-solid fa-wallet"></i></a>
+														   <!--<a class="wallet-btn" href="#" data-bs-toggle="modal" data-bs-target="#wallet-modal" id="walletbtn">
+                               0x4...5c8c&nbsp;<i class="fa-solid fa-wallet"></i></a>-->
+
+                            <!-- toggle icons -->
+                            <div class="header-bar d-lg-none">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- ==========Header Section Ends Here========== -->
+
+
+
+
+    <!-- connected wallet modal start -->
+    <div class="wallet-modal modal fade" id="wallet-modal" tabindex="-1" aria-labelledby="choose-wallet"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="choose-wallet">Connected Wallet Balance</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <h1 id="balancee">0.000 ETH</h1>
+    <p>Invite your friends with Your Affliate Link, <a href="javascript:void(0);" onclick="referral()">[click to view]</a>, Earn 5% from every presale purchase and 100% airdrop unlock.</p>
+  <div class="form-group">
+                        <button class="default-btn" onclick="disconnectFromWallet()"><span>Disconnect Wallet</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- connected wallet modal end -->     
+	
+	
+	<!-- connect wallet modal start -->
+    <div class="wallet-modal modal fade" id="connectmodal" tabindex="-1" aria-labelledby="choose-wallet" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="choose-wallet">Connect Your Wallet</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <p>Choose your Wallet. If you cant find your Wallet, use the WalletConnect option.</p>
+                <div class="account-form">
+                   <div class="form-group">
+<button class="d-block default-btn" onclick="connectToWalletInjected()"><img src="assets/images/wallet/metamask.svg"><span>Metamask</span></button><br>
+
+<!--<button id="trustbutton" class="d-block default-btn" onclick="connectToWalletInjected()"><img src="assets/images/wallet/trustwallet.svg"><span>Trust Wallet</span></button><br>-->
+
+<button class="d-block default-btn" onclick="connectToWalletWC()"><img src="assets/images/wallet/walletconnect.svg"><span>WalletConnect</span></button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- connect wallet modal end --> 
+	
+	
+	<!-- referral modal start -->
+	<div class="wallet-modal modal fade" id="referral-modal" tabindex="-1" aria-labelledby="choose-wallet" aria-modal="true" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="choose-wallet">Invite your Friends</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form class="account-form">
+                    <div class="form-group">
+                        <input id="refaddress" type="text" placeholder="Your Affiliate Link" value="">
+                    </div>
+                    <div class="form-group">
+                        <a class="default-btn" id="showcopy" onclick="kopiraj()"><span>Copy to Clipboard</span></a>
+                    </div>
+                </form>
+    <p>1. You will always receive 5% of your friends purchased ETH from presale.</p>
+	
+	<p>2. You will always receive 5% of your friends $AFFI Airdrop Claim.</p>
+	
+	<p>3. You will be awarded 100% airdrop unlock once one of your invited friend purchases the presale!</p>
+    
+    <p>4. You will also receive 1% of your friends buy and sell camelot volume forever. Invite more to earn more!</p>
+	            </div>
+            </div>
+        </div>
+    </div>
+	<!-- referral modal end -->
+<!-- stake modal -->
+   <div class="wallet-modal modal fade" id="inputstakeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Bridge-Stake your $TRUM</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  
+    <div class="stacking__approve">
+                                    <div class="stacking__approve-field mb-5">
+                                        <label for="approve-stack" class="form-label">Total TRUM Purchased: <span id="sectotalbought">0.0000 $TRUM</span>
+										<a href="app.html" class="default-btn default-btn--small default-btn--secondary"><span>Buy TRUM from Presale</span></a>
+                                        </label>
+										<p class="note-text"><strong style="color:#28dbd1">Note: </strong>Your presale TRUM tokens can be staked on this bridge-farm. You still own these tokens and can claim them after the presale.</p>
+<p class="note-text"><strong style="color:#28dbd1">Note: </strong>After you start the bridge-farm, you dont need to do anything. you just harvest your AFFI rewards continously.</p>
+<p class="note-text"><strong style="color:#28dbd1">Note: </strong>After commencing bridge-farming, buying more TRUM tokens will auto-compound to the farming capital, increasing your rewards.</p>
+                                    </div>
+<button id="actionbutton" class="default-btn" onclick="EnterStaking()"><span>START BRIDGE-FARM</span></button>
+                                    
+                                </div>
+	               </div>
+            </div>
+        </div>
+    </div>
+<!-- end stake modal -->
+
+<!-- warning modal start -->
+ <div class="wallet-modal modal fade" id="warningModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="choose-wallet">⚠️Harvest Rewards First!</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  
+    <p class="note-text"><strong style="color:#28dbd1">Note: </strong>All Unharvested AFFI Rewards from bridgefarm will be erased. please ensure to harvest your rewards before Terminating bridge-farming.</p>
+  <div class="form-group" id="warningactionbutton">
+                        <button class="default-btn" onclick="ExitStaking()"><span>TERMINATE BRIDGE-FARM</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- warning modal end -->
+
+
+    <!-- ================> Page header start here <================== -->
+    <section class="page-header bg--cover" style="background-image: url(assets/images/header/bg.jpg);">
+        <div class="container">
+            <div class="page-header__content text-center">
+                <h2 class="text-capitalize">TRUM BridgeFarm</h2>
+                <nav style="--bs-breadcrumb-divider: '-';" aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="https://affitrum.ai/index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">BridgeFarm</li>
+                    </ol>
+                </nav>
+            </div>
+			<div class="alert alert-warning" style="text-align: center;">Stake purchased and unclaimed $TRUM tokens in our bridge-farm to earn up to 401% APY in beast mode.</div>
+        </div>
+    </section>
+    <!-- ================> Page header end here <================== -->
+
+
+
+
+
+    <!-- ================> stacking start here <================== -->
+    <div class="stacking">
+        <div class="container">
+            <div class="stacking__wrapper">
+                <div class="stacking__project">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="stacking__project-item">
+                                <div class="stacking__project-itemInner">
+                                    <h3><span id="totalbought">0.0000 $TRUM</span> </h3>
+                                    <p>Total Trum Purchased</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="stacking__project-item">
+                                <div class="stacking__project-itemInner">
+                                    <h3><span id="totalclaimed">0.0000 $AFFI</span> </h3>
+                                    <p>Total AFFI Harvested</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="stacking__project-item">
+                                <div class="stacking__project-itemInner">
+                                    <h3><span id="apy">0.00%</span> </h3>
+                                    <p>Current APY</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="stacking__details">
+                    <div class="stacking__content">
+                        <div class="row align-items-center g-5">
+                            <div class="col-lg-5 col-md-8">
+                                <div class="stacking__approve">
+								    <input id="apyamt" type="text" class="form-control" value="40" style="display: none;"></input>
+                                    <div class="form-group" style="margin-bottom:35px;"><p id="welcometext" class="stacking__info-value">Connect Wallet to begin!</p>
+                                    <button id="buttons" class="default-btn" data-bs-toggle="modal" data-bs-target="#connectmodal"><span>Connect Wallet&nbsp;<i class="fa-solid fa-wallet"></i></span></button>
+                                    </div>
+                                </div>
+                            </div>
+							
+							<div class="col-lg-7">
+                                <div class="stacking__ammount">
+                                    <p>Unharvested $AFFI Rewards</p>
+                                    <h4 id="unclaimed" style="color:#f1b803;">0.0000 $AFFI</h4>
+                                     <div id="claimrewardbtn"></div>
+                                </div>
+    
+                                   
+                                <div class="stacking__period" style="margin-top:8px;">
+                                    
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active">
+                                            <div class="stacking__info">
+                                                <div class="row align-items-center g-5">
+                                                    <div class="col-sm-8">
+                                                        <ul class="stacking__info-list">
+                                                            <li class="stacking__info-item">
+                                                                <p class="stacking__info-name">Can harvest in:
+                                                                    <span class="stacking__info-value" id="timeleft">0Hours 00Seconds</span>
+                                                                </p>
+                                                            </li>
+                                                            <li class="stacking__info-item">
+                                                                <p class="stacking__info-name">Re-locks on harvest:
+                                                                    <span class="stacking__info-value">Yes</span>
+                                                                </p>
+                                                            </li>
+                                                            <li class="stacking__info-item">
+                                                                <p class="stacking__info-name">Locking Period:
+                                                                    <span class="stacking__info-value">10 minutes</span>
+                                                                </p>
+                                                            </li>
+                                                            <li class="stacking__info-item">
+                                                                <p class="stacking__info-name">Minimum presale stakeable
+                                                                    <span class="stacking__info-value">450 $TRUM</span>
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                         <div class="stacking__apy">
+                                                            <p>APY Rate </p>
+                                                            <h3>~401%</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <p class="note-text"><strong>Note:</strong>This is a temporal Staking area. After the presale, this bridge farm will be replaced with (TRUM-STAKING) and will yield $TRUM tokens. Since TRUM is not listed yet, staking $TRUM can currently yeild $AFFI tokens through the TRUM Bridge-Farm.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ================> stacking end here <================== -->
+
+
+
+    <!-- ================> Footer section start here <================== -->
+    <footer class="footer" style="background-image: url(assets/images/footer/bg.png);">
+        <div class="footer__wrapper">
+            <div class="container">
+                <div class="footer__content text-center">
+                    <a class="mb-4 d-inline-block" href="https://affitrum.ai/index.html"><img src="assets/images/logo/logo.png"
+                            alt="Logo" height="110" width="300"></a>
+                    <ul class="social justify-content-center">
+					<li class="social__item">
+                                                        <a href="https://discord.gg/5tn8ZeuB" class="social__link"><i
+                                                                class="fab fa-discord"></i></a>
+                                                    </li>
+                        <li class="social__item">
+						                            
+                                                    <a href="https://t.me/affitrum" class="social__link"><i
+                                                                class="fab fa-telegram"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://t.me/affitrumprotocol" class="social__link"><i
+                                                                class="fab fa-telegram"></i></a>
+                                                    </li>
+                                                    <li class="social__item">
+                                                        <a href="https://twitter.com/affitrum" class="social__link"><i
+                                                                class="fab fa-twitter"></i></a>
+                                                    </li>
+                                                    <li class="social__item">
+                                                        <a href="https://medium.com/@affitrum" class="social__link"><i
+                                                                class="fab fa-medium"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://facebook.com/affitrum" class="social__link"><i
+                                                                class="fab fa-facebook"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://www.youtube.com/channel/UClPL3Ff4xfY2z18rBC1Xjtg" class="social__link"><i
+                                                                class="fab fa-youtube"></i></a>
+                                                    </li>
+													<li class="social__item">
+                                                        <a href="https://github.com/affitrum/AFFITRUM" class="social__link"><i
+                                                                class="fab fa-github"></i></a>
+                                                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="container">
+                <div class="text-center py-4">
+                    <p class=" mb-0">Affitrum© 2023 | All Rights Reserved </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ================> Footer section end here <================== -->
+
+
+    <!-- scrollToTop start here -->
+    <a href="bridgefarm.html#" class="scrollToTop"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
+    <!-- scrollToTop ending here  -->
+	
+	<script src="https://affitrum.ai/js/copyscript5.js"></script>
+
+    <!-- vendor plugins -->
+    <script src="assets/js/jquery-3.6.0.min.js">
+    </script>
+	
+	<script type="text/javascript" src="unpkg.com/web3@1.6.1/dist/walletconnect_v2.8.3.js"></script>
+	<script type="text/javascript" src="unpkg.com/web3@1.6.1/dist/web3-providers-http.min.js"></script>
+	<script type="text/javascript" src="unpkg.com/web3@1.6.1/dist/web3.min.js"></script>
+    <script type="text/javascript" src="js/bridgefarm.js"></script>
+	
+	
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/all.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/purecounter.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
